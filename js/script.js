@@ -472,7 +472,7 @@ function addCommasToNumber(number) {
 
 // Init App
 function init() {
-	const path = global.currentPage.replace(/^\//, '');
+	const path = global.currentPage.replace(/\/$/, '');
 
 	switch (path) {
 		case '/':
