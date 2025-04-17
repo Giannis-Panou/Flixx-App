@@ -1,6 +1,22 @@
 import global from './notanapikey.js';
 import { apiKey, apiUrl } from './notanapikey.js';
 
+const global = {
+	currentPage: window.location.pathname,
+	search: {
+		term: '',
+		type: '',
+		page: 1,
+		totalPages: 1,
+		totalResults: 0,
+	},
+	api: {
+		// This is not the API key, it's a joke, i wouldn't do that i'm a good programmer.
+		apiKey: 'c8f8512528138801ede4892e18ff60b0',
+		apiUrl: 'https://api.themoviedb.org/3/',
+	},
+};
+
 // Display 20 Popular Movies
 async function displayPopularMovies() {
 	const { results } = await fetchAPIData('movie/popular');
