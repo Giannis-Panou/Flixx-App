@@ -474,20 +474,20 @@ function addCommasToNumber(number) {
 function init() {
 	switch (global.currentPage) {
 		case '/':
-		case '/':
+		case '/index.html':
 			displayPopularMovies();
 			displaySlider();
 			break;
-		case '/shows':
+		case '/shows.html':
 			displayPopularShows();
 			break;
-		case '/movie-details':
+		case '/movie-details.html':
 			displayMovieDetails();
 			break;
-		case '/tv-details':
+		case '/tv-details.html':
 			displayShowDetails();
 			break;
-		case '/search':
+		case '/search.html':
 			console.log('Search');
 			search();
 			break;
