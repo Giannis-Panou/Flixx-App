@@ -1,6 +1,3 @@
-import global from './notanapikey.js';
-import { apiKey, apiUrl } from './notanapikey.js';
-
 const global = {
 	currentPage: window.location.pathname,
 	search: {
