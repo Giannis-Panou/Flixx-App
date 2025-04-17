@@ -16,7 +16,7 @@ const global = {
 
 // Display 20 Popular Movies
 async function displayPopularMovies() {
-	const { results } = await fetchAPIData('movie/popular/');
+	const { results } = await fetchAPIData('movie/popular');
 
 	results.forEach((movie) => {
 		const div = document.createElement('div');
@@ -472,7 +472,9 @@ function addCommasToNumber(number) {
 
 // Init App
 function init() {
-	switch (global.currentPage) {
+	const path = global.currentPage.replace(/^\//, '');
+
+	switch (path) {
 		case '/':
 		case '/index.html':
 			displayPopularMovies();
@@ -491,6 +493,8 @@ function init() {
 			console.log('Search');
 			search();
 			break;
+		default:
+			console.warm('No route matched for ${path}');
 	}
 
 	highlightActiveLink();
